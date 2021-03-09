@@ -16,6 +16,11 @@ import re
 pd.set_option('display.max_columns',None)
 pd.set_option('display.max_rows',None)
 
+#通过关联commit数据与问题单，为每个为题单进行标注
+#若一个问题单单号在commit数据中有对应的数据，则认为该问题单为代码触发
+
+
+
 #该服务中间改过名，所以需要将名称进行统一
 data=pd.read_csv('C:/Users/dwx780786/Desktop/reliability/newbug.csv')
 data=data.dropna(subset=['sbaseline'])# 删除空值
